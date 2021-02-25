@@ -13,6 +13,8 @@ For a better Experience, you can install the `Jetbrains Mono` Font.
 
 ## 简体中文
 
+[想法](https://www.wootec.top/2021/02/24/IDA-Skins/)
+
 这个仓库用来存放两个可以用在ida 7.3+版本中的皮肤.
 
 * VSCode Default Light Theme
