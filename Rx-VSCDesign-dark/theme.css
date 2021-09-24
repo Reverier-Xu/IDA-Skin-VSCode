@@ -6,6 +6,10 @@
 
 .text-input-font {}
 
+QWidget:focus {
+  outline: none;
+}
+
 QWidget {
   background-color: #1E1E1E;
   color           : #FFFFFF;
