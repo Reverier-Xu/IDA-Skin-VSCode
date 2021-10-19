@@ -59,7 +59,7 @@ QStatusBar:item {
 
 IDAMainWindow>QStatusBar {
   min-height    : 0;
-  height        : 23px;
+  height        : 1em;
   padding-bottom: 6px;
   padding-right : 7px;
   background    : #0078d6;
@@ -82,8 +82,8 @@ IDAMainWindow>QStatusBar QWidget {
 
 QPushButton {
   text-align: center;
-  min-height: 23px;
-  max-height: 23px;
+  min-height: 1em;
+  max-height: 1em;
   min-width : 50px;
   border    : none;
   background: #0078d6;
@@ -110,7 +110,7 @@ QTreeView {
 
 QTreeView:item {
 
-  height: 27.5px;
+  height: 1.2em;
   color : #222222;
 }
 
@@ -121,7 +121,7 @@ QTreeView:item:selected {
 QTreeView QHeaderView:section {
   border          : 0px solid black;
   background-color: #dfdfdf;
-  height          : 27.5px;
+  height          : 1.2em;
   padding-left    : 5px;
 }
 
@@ -130,9 +130,9 @@ QLineEdit {
   background: #efefef;
   color     : #222222;
   padding   : 0px;
-  height    : 25px;
-  max-height: 25px;
-  min-height: 25px;
+  height    : 1.1em;
+  max-height: 1.1em;
+  min-height: 1.1em;
 }
 
 QLineEdit:focus {
@@ -159,9 +159,9 @@ QTabBar:tab {
   border-right    : 1px solid #adadad;
   border-bottom   : 1px solid transparent;
   background-color: #ffffff;
-  height          : 32px;
-  max-height      : 40px;
-  min-height      : 40px;
+  height          : 1.4em;
+  max-height      : 1.7em;
+  min-height      : 1.7em;
   padding         : 0 15px;
   color           : #222222;
 }
@@ -173,7 +173,7 @@ QTabBar:tab:selected {
 
 QTabBar:close-button {
   image       : url("$RELPATH/icons/close.png");
-  icon-size   : 20px;
+  icon-size   : 0.9em;
   padding     : 0px;
   margin-right: 4px;
 }
@@ -183,7 +183,7 @@ QTabBar:close-button:hover {
 }
 
 QTabBar:close-button:pressed {
-  icon-size: 24px;
+  icon-size: 1em;
   padding  : 1px -1px -1px 1px;
 }
 
@@ -397,9 +397,9 @@ DockWidget {
 
 DockWidgetTitle {
   background: #cfcfcf;
-  height    : 25px;
-  max-height: 25px;
-  min-height: 25px;
+  height    : 1.1em;
+  max-height: 1.1em;
+  min-height: 1.1em;
   padding   : 0px;
   border    : 0;
   margin    : 0;
@@ -415,9 +415,9 @@ DockWidgetTitle[active="true"] {
 }
 
 DockWidgetTitle QPushButton {
-  min-height      : 21px;
-  height          : 21px;
-  min-width       : 25px;
+  min-height      : 0.9em;
+  height          : 0.9em;
+  min-width       : 1.1em;
   padding         : 0;
   background-color: transparent;
 }
@@ -559,7 +559,7 @@ CustomIDAMemo
     qproperty-graph-bg-top: #EFEFEF;
     qproperty-graph-bg-bottom: #EFEFEF;
     qproperty-graph-node-shadow: #EFEFEF;
-    
+
     qproperty-line-fg-default                     : blue;        /* Default                                       */
     qproperty-line-fg-regular-comment             : blue;        /* Regular comment                               */
     qproperty-line-fg-repeatable-comment          : gray;        /* Repeatable commen                             */
@@ -671,7 +671,7 @@ CustomIDAMemo[hints="true"] {
 }
 
 navigator_t {
-  height: 10px;
+  height: 0.5em;
 }
 
 QSplitter::handle {

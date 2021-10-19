@@ -59,7 +59,7 @@ QStatusBar:item {
 
 IDAMainWindow>QStatusBar {
   min-height    : 0;
-  height        : 23px;
+  height        : 1em;
   padding-bottom: 6px;
   padding-right : 7px;
   background    : #007acc;
@@ -81,8 +81,8 @@ IDAMainWindow>QStatusBar QWidget {
 
 QPushButton {
   text-align: center;
-  min-height: 23px;
-  max-height: 23px;
+  min-height: 1em;
+  max-height: 1em;
   min-width : 50px;
   border    : none;
   background: #007acc;
@@ -109,7 +109,7 @@ QTreeView {
 
 QTreeView:item {
 
-  height: 27.5px;
+  height: 1.2em;
   color : #e7e7e7;
 }
 
@@ -120,7 +120,7 @@ QTreeView:item:selected {
 QTreeView QHeaderView:section {
   border          : 0px solid black;
   background-color: #272727;
-  height          : 27.5px;
+  height          : 1.2em;
   padding-left    : 5px;
 }
 
@@ -129,9 +129,9 @@ QLineEdit {
   background: #272727;
   color     : #ccc;
   padding   : 0px;
-  height    : 25px;
-  max-height: 25px;
-  min-height: 25px;
+  height    : 1.1em;
+  max-height: 1.1em;
+  min-height: 1.1em;
 }
 
 QLineEdit:focus {
@@ -157,9 +157,9 @@ QTabBar {
 QTabBar:tab {
   border-right    : 2px solid #252526;
   background-color: #333333;
-  height          : 32px;
-  max-height      : 40px;
-  min-height      : 40px;
+  height          : 1.4em;
+  max-height      : 1.7em;
+  min-height      : 1.7em;
   padding         : 0 15px;
   color           : #FFFFFF;
 }
@@ -170,7 +170,7 @@ QTabBar:tab:selected {
 
 QTabBar:close-button {
   image       : url("$RELPATH/icons/close.png");
-  icon-size   : 20px;
+  icon-size   : 0.9em;
   padding     : 0px;
   margin-right: 4px;
 }
@@ -180,7 +180,7 @@ QTabBar:close-button:hover {
 }
 
 QTabBar:close-button:pressed {
-  icon-size: 24px;
+  icon-size: 1em;
   padding  : 1px -1px -1px 1px;
 }
 
@@ -389,9 +389,9 @@ DockWidget {
 
 DockWidgetTitle {
   background: #272727;
-  height    : 25px;
-  max-height: 25px;
-  min-height: 25px;
+  height    : 1.1em;
+  max-height: 1.1em;
+  min-height: 1.1em;
   padding   : 0px;
   border    : 0;
   margin    : 0;
@@ -407,11 +407,11 @@ DockWidgetTitle[active="true"] {
 }
 
 DockWidgetTitle QPushButton {
-  min-height      : 21px;
-  height          : 21px;
-  min-width       : 25px;
+  min-height      : 0.9em;
+  height          : 0.9em;
+  min-width       : 1.1px;
   padding         : 0;
-  background-color: 1e1e1e;
+  background-color: #1e1e1e;
 }
 
 DockWidgetTitle QPushButton[toolTip="Fullscreen"] {
@@ -678,7 +678,7 @@ CustomIDAMemo[hints="true"] {
 }
 
 navigator_t {
-  height: 10px;
+  height: 0.5em;
 }
 
 QSplitter::handle {
