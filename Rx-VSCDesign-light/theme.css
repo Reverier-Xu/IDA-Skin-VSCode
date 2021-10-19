@@ -159,9 +159,9 @@ QTabBar:tab {
   border-right    : 1px solid #adadad;
   border-bottom   : 1px solid transparent;
   background-color: #ffffff;
-  height          : 1.4px;
-  max-height      : 1.7px;
-  min-height      : 1.7px;
+  height          : 1.4em;
+  max-height      : 1.7em;
+  min-height      : 1.7em;
   padding         : 0 15px;
   color           : #222222;
 }
@@ -173,7 +173,7 @@ QTabBar:tab:selected {
 
 QTabBar:close-button {
   image       : url("$RELPATH/icons/close.png");
-  icon-size   : 20px;
+  icon-size   : 0.9em;
   padding     : 0px;
   margin-right: 4px;
 }
@@ -183,7 +183,7 @@ QTabBar:close-button:hover {
 }
 
 QTabBar:close-button:pressed {
-  icon-size: 24px;
+  icon-size: 1em;
   padding  : 1px -1px -1px 1px;
 }
 
@@ -417,7 +417,7 @@ DockWidgetTitle[active="true"] {
 DockWidgetTitle QPushButton {
   min-height      : 0.9em;
   height          : 0.9em;
-  min-width       : 1.1ex;
+  min-width       : 1.1em;
   padding         : 0;
   background-color: transparent;
 }
@@ -559,7 +559,7 @@ CustomIDAMemo
     qproperty-graph-bg-top: #EFEFEF;
     qproperty-graph-bg-bottom: #EFEFEF;
     qproperty-graph-node-shadow: #EFEFEF;
-    
+
     qproperty-line-fg-default                     : blue;        /* Default                                       */
     qproperty-line-fg-regular-comment             : blue;        /* Regular comment                               */
     qproperty-line-fg-repeatable-comment          : gray;        /* Repeatable commen                             */
@@ -671,7 +671,7 @@ CustomIDAMemo[hints="true"] {
 }
 
 navigator_t {
-  height: 10px;
+  height: 0.5em;
 }
 
 QSplitter::handle {
