@@ -157,9 +157,9 @@ QTabBar {
 QTabBar:tab {
   border-right    : 2px solid #252526;
   background-color: #333333;
-  height          : 1.4em;
-  max-height      : 1.7em;
-  min-height      : 1.7em;
+  height          : 2em;
+  max-height      : 2em;
+  min-height      : 2em;
   padding         : 0 15px;
   color           : #FFFFFF;
 }
@@ -389,9 +389,9 @@ DockWidget {
 
 DockWidgetTitle {
   background: #272727;
-  height    : 1.1em;
-  max-height: 1.1em;
-  min-height: 1.1em;
+  height    : 1.2em;
+  max-height: 1.2em;
+  min-height: 1.2em;
   padding   : 0px;
   border    : 0;
   margin    : 0;
@@ -411,7 +411,7 @@ DockWidgetTitle QPushButton {
   height          : 0.9em;
   min-width       : 1.1px;
   padding         : 0;
-  background-color: #1e1e1e;
+  background-color: transparent;
 }
 
 DockWidgetTitle QPushButton[toolTip="Fullscreen"] {
@@ -506,7 +506,7 @@ QGroupBox:title {
 TextArrows {
   border-bottom: 1px solid #414141;
 }
-
+/*
 IDADockWidget[objectName="Output window"] {
   qproperty-windowIcon: url("$RELPATH/icons/blank.png");
 }
@@ -519,7 +519,7 @@ IDADockWidget[objectName="Output window"] DockWidgetTitle {
 }
 
 IDADockWidget[objectName="Output window"] DockWidgetTitle QPushButton {
-  background: #1e1e1e;
+  background: transparent;
 }
 
 IDADockWidget[objectName="Output window"] QTextEdit:focus {
@@ -542,7 +542,7 @@ IDADockWidget[objectName="Output window"] QGroupBox QPushButton:hover {
 
 IDADockWidget[objectName="Output window"] QGroupBox QPushButton:focus {
   border: none;
-}
+}*/
 
 CustomIDAMemo {
   border: none;
