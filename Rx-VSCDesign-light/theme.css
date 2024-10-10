@@ -311,7 +311,7 @@ QMenu:separator {
 QComboBox {
   background: #dfdfdf;
   border: 1px solid #afafaf;
-  padding: 6px;
+  padding: 0.15em 0.3em;
 }
 
 QComboBox:focus,
@@ -408,10 +408,10 @@ DockWidget {
 
 DockWidgetTitle {
   background: #cfcfcf;
-  height: 1.2em;
+/*   height: 1.2em;
   max-height: 1.2em;
-  min-height: 1.2em;
-  padding: 0px;
+  min-height: 1.2em; */
+  padding: 0.1em 0.2em;
   border: 0;
   margin: 0;
   color: #000000;
@@ -426,10 +426,10 @@ DockWidgetTitle[active="true"] {
 }
 
 DockWidgetTitle QPushButton {
-  min-height: 0.9em;
-  height: 0.9em;
-  min-width: 1.1em;
-  padding: 0;
+  min-height: 1.2em;
+  height: 1.2em;
+  min-width: 1.2em;
+  padding: 0px;
   background-color: transparent;
 }
 
@@ -737,6 +737,10 @@ navigator_t {
 QSplitter::handle {
   image: url(images/splitter.png);
   background-color: white;
+}
+
+QSplitter::handle:hover {
+  background-color: #0078D6;
 }
 
 QSplitter::handle:horizontal {
