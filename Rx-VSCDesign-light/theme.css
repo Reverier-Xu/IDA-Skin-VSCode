@@ -45,7 +45,7 @@ QToolButton {
 }
 
 QToolButton:hover {
-  background: #20ffffff;
+  background: #20000000;
 }
 
 QToolButton[popupMode="1"] {
