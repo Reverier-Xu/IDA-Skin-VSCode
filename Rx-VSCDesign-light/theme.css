@@ -12,8 +12,8 @@ QWidget:focus {
 
 QWidget {
   background-color: #efefef;
-  color           : #222222;
-  font-family     : 'JetBrains Mono';
+  color: #222222;
+  font-family: monospace, 'JetBrains Mono';
 }
 
 IDAView {
@@ -26,47 +26,57 @@ hexview_t {
 
 QToolBar {
   background-color: #efefef;
-  border          : none;
-  spacing         : 5px;
-  border          : 1px solid #eeeeee;
+  border: none;
+  spacing: 0.2em;
+  border: 0.5px solid #eeeeee;
+  padding: 0.5em 0.1em;
 }
 
 QToolBar:active {
-  background-color: #dfdfdf;
+  background-color: #f0f0f0;
 }
 
-QToolBar QWidget {
+
+QToolButton {
+  min-width: 1.2em;
+  height: 1.2em;
+  border: 0px solid black;
   background: transparent;
-  border    : 1px solid #eeeeee;
 }
 
-QToolBar:handle {
-  image        : url("$RELPATH/icons/drag.png");
-  padding-right: 10px;
-  padding-left : 0;
-  width        : 10px;
+QToolButton:hover {
+  background: #20ffffff;
+}
+
+QToolButton[popupMode="1"] {
+  padding-right: 1em;
+}
+
+QToolButton::menu-button {
+  width: 1em;
+  height: 1.2em;
+  background: transparent;
+  border: 0px solid #3C3C3C;
 }
 
 QStatusBar {
-  background : #efefef;
-  font-family: 'JetBrains Mono';
+  background: #efefef;
+  font-family: monospace, 'JetBrains Mono';
 }
 
 QStatusBar:item {
-  border     : none;
-  font-family: 'JetBrains Mono';
+  border: none;
+  font-family: monospace, 'JetBrains Mono';
 }
 
 IDAMainWindow>QStatusBar {
-  min-height    : 0;
-  height        : 1em;
-  padding-bottom: 6px;
-  padding-right : 7px;
-  background    : #0078d6;
-  color         : #ffffff;
-  border-left   : 1px solid #dfdfdf;
-  border-right  : 1px solid #dfdfdf;
-  border-top    : 1px solid #dfdfdf;
+  min-height: 1.2em;
+  height: 1.2em;
+  padding: 0.3em;
+  background: #0078d6;
+  border-left: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  border-top: 1px solid #dfdfdf;
 }
 
 IDAMainWindow>QStatusBar:item {
@@ -74,26 +84,26 @@ IDAMainWindow>QStatusBar:item {
 }
 
 IDAMainWindow>QStatusBar QWidget {
-  color         : #ffffff;
-  padding-left  : 3px;
+  color: #ffffff;
+  /*   padding-left  : 3px;
   padding-right : 12px;
-  padding-bottom: 5px;
+  padding-bottom: 5px; */
 }
 
 QPushButton {
   text-align: center;
   min-height: 1em;
   max-height: 1em;
-  min-width : 50px;
-  border    : none;
+  min-width: 50px;
+  border: none;
   background: #0078d6;
-  padding   : 2px 10px;
-  color     : #FFFFFF;
+  padding: 0.3em 0.5em;
+  color: #FFFFFF;
 }
 
 QPushButton:hover {
   background: #0e639c;
-  border    : none;
+  border: none;
 }
 
 QPushButton:default {
@@ -109,9 +119,8 @@ QTreeView {
 }
 
 QTreeView:item {
-
-  height: 1.2em;
-  color : #222222;
+  height: 1.1em;
+  color: #222222;
 }
 
 QTreeView:item:selected {
@@ -119,20 +128,17 @@ QTreeView:item:selected {
 }
 
 QTreeView QHeaderView:section {
-  border          : 0px solid black;
+  border: 0px solid black;
   background-color: #dfdfdf;
-  height          : 1.2em;
-  padding-left    : 5px;
+  height: 1.2em;
+  padding-left: 0.5em;
 }
 
 QLineEdit {
-  border    : 1px solid #0078d6;
+  border: 1px solid #0078d6;
   background: #efefef;
-  color     : #222222;
-  padding   : 0px;
-  height    : 1.1em;
-  max-height: 1.1em;
-  min-height: 1.1em;
+  color: #222222;
+  padding: 0.15em 0.3em;
 }
 
 QLineEdit:focus {
@@ -140,30 +146,27 @@ QLineEdit:focus {
 }
 
 QTabWidget::pane {
-  border          : 2px solid #cdcdcd;
+  border: 2px solid #cdcdcd;
   background-color: #dcdcdc;
 }
 
 QTabWidget::tab-bar {
-  border    : 0;
+  border: 0;
   border-top: 1px solid #afafaf;
 }
 
 QTabBar {
   background-color: #ffffff;
-  border          : 0px solid black;
-  border-bottom   : 2px solid #ffffff;
+  border: 0px solid black;
+  border-bottom: 2px solid #ffffff;
 }
 
 QTabBar:tab {
-  border-right    : 1px solid #adadad;
-  border-bottom   : 1px solid transparent;
+  border-right: 1px solid #adadad;
+  border-bottom: 1px solid transparent;
   background-color: #ffffff;
-  height          : 2em;
-  max-height      : 2em;
-  min-height      : 2em;
-  padding         : 0 15px;
-  color           : #222222;
+  padding: 0.3em 0.8em;
+  color: #222222;
 }
 
 QTabBar:tab:selected {
@@ -172,9 +175,9 @@ QTabBar:tab:selected {
 }
 
 QTabBar:close-button {
-  image       : url("$RELPATH/icons/close.png");
-  icon-size   : 0.9em;
-  padding     : 0px;
+  image: url("$RELPATH/icons/close.png");
+  icon-size: 0.9em;
+  padding: 0px;
   margin-right: 4px;
 }
 
@@ -184,13 +187,13 @@ QTabBar:close-button:hover {
 
 QTabBar:close-button:pressed {
   icon-size: 1em;
-  padding  : 1px -1px -1px 1px;
+  padding: 1px -1px -1px 1px;
 }
 
 QMenuBar {
   background-color: #efefef;
-  padding-left    : 2px;
-  border-bottom   : 0px solid black;
+  padding: 0.1em 0.1em;
+  border-bottom: 0px solid black;
 }
 
 QMenuBar:active {
@@ -199,7 +202,8 @@ QMenuBar:active {
 
 QMenuBar:item {
   background: transparent;
-  color     : #222222;
+  color: #222222;
+  padding: 0.3em 0.3em
 }
 
 QMenuBar:item:selected {
@@ -207,7 +211,7 @@ QMenuBar:item:selected {
 }
 
 QTableView {
-  border          : 1px solid #eeeeee;
+  border: 1px solid #eeeeee;
   background-color: white;
 }
 
@@ -216,9 +220,9 @@ QTableView:item {
 }
 
 QTableView:item:selected {
-  border          : none !important;
+  border: none !important;
   background-color: #0078d6;
-  color           : white;
+  color: white;
 }
 
 QTableView:section:item {
@@ -227,22 +231,22 @@ QTableView:section:item {
 
 QTableView QHeaderView:section {
   background-color: #dfdfdf;
-  border          : none;
+  border: none;
 }
 
 QTableView QHeaderView:section:horizontal {
-  padding    : 2px;
+  padding: 2px;
   border-left: 1px solid #2D3234;
 }
 
 QTableView QHeaderView:section:vertical {
-  padding   : 0;
+  padding: 0;
   background: transparent;
 }
 
 QTableView QTableCornerButton:section {
   background: #dfdfdf;
-  border    : 0px outset #000;
+  border: 0px outset #000;
 }
 
 QListView {
@@ -253,7 +257,7 @@ QListView:item {}
 
 QListView:item:selected {
   background-color: #0078d6;
-  color           : white;
+  color: white;
 }
 
 QCheckBox {
@@ -268,8 +272,8 @@ QRadioButton {
 
 QMenu {
   background-color: #efefef;
-  border          : 1px solid rgba(20, 20, 20, 30);
-  padding-bottom  : 8px;
+  border: 1px solid rgba(20, 20, 20, 30);
+  padding-bottom: 8px;
 }
 
 QMenu:item {
@@ -278,11 +282,11 @@ QMenu:item {
 
 QMenu:item:selected {
   background-color: #0078d6;
-  color           : white;
+  color: white;
 }
 
 QMenu:right-arrow {
-  image : url("$RELPATH/icons/menu.png");
+  image: url("$RELPATH/icons/menu.png");
   margin: 5px 15px 5px 5px;
 }
 
@@ -291,16 +295,16 @@ QMenu:icon {
 }
 
 QMenu:separator {
-  height    : 1px;
+  height: 1px;
   background: #909090;
-  width     : 1px;
-  margin    : 6px;
+  width: 1px;
+  margin: 6px;
 }
 
 QComboBox {
   background: #dfdfdf;
-  border    : 1px solid #afafaf;
-  padding   : 6px;
+  border: 1px solid #afafaf;
+  padding: 6px;
 }
 
 QComboBox:focus,
@@ -311,29 +315,29 @@ QComboBox:editable {
 }
 
 QComboBox QLineEdit {
-  background : transparent;
-  padding    : 0;
-  border     : 0;
+  background: transparent;
+  padding: 0;
+  border: 0;
   margin-left: 0px;
-  margin-top : -4px;
+  margin-top: -4px;
 }
 
 QComboBox:drop-down {
-  subcontrol-origin  : padding;
+  subcontrol-origin: padding;
   subcontrol-position: top right;
-  border             : none;
-  width              : 20px;
+  border: none;
+  width: 20px;
 }
 
 QComboBox:drop-down:editable {
-  subcontrol-origin  : padding;
+  subcontrol-origin: padding;
   subcontrol-position: top right;
-  border             : none;
-  width              : 20px;
+  border: none;
+  width: 20px;
 }
 
 QComboBox:down-arrow {
-  image : url("$RELPATH/icons/expand.png");
+  image: url("$RELPATH/icons/expand.png");
   margin: 0;
 }
 
@@ -343,20 +347,20 @@ QComboBox>QLineEdit {
 
 QComboBox>QLineEdit:hover {
   min-height: default;
-  border    : 0px solid black;
+  border: 0px solid black;
 }
 
 QComboBox>QLineEdit:focus {
   min-height: default;
-  border    : 0px solid black;
+  border: 0px solid black;
 }
 
 QComboBox QAbstractItemView {
-  background                : #efefef;
-  outline                   : none;
+  background: #efefef;
+  outline: none;
   selection-background-color: #0078d6;
-  selection-color           : white;
-  border                    : 1px solid #dfdfdf;
+  selection-color: white;
+  border: 1px solid #dfdfdf;
 }
 
 QComboBox:focus {
@@ -369,24 +373,24 @@ QComboBox QLineEdit:focus {
 
 QTextEdit {
   background-color: #2D3234;
-  border          : 2px solid #2D2D2D;
+  border: 2px solid #2D2D2D;
 }
 
 TNavBand>QPushButton,
 nav_scroll_button_t {
-  border       : none;
-  background   : transparent;
-  min-height   : default;
-  min-width    : default;
-  padding      : default;
+  border: none;
+  background: transparent;
+  min-height: default;
+  min-width: default;
+  padding: default;
   border-radius: default;
 }
 
 RegJumpButton {
   min-height: 0;
-  min-width : 0;
-  border    : none;
-  padding   : 0;
+  min-width: 0;
+  border: none;
+  padding: 0;
 }
 
 QDockWidget,
@@ -397,13 +401,13 @@ DockWidget {
 
 DockWidgetTitle {
   background: #cfcfcf;
-  height    : 1.2em;
+  height: 1.2em;
   max-height: 1.2em;
   min-height: 1.2em;
-  padding   : 0px;
-  border    : 0;
-  margin    : 0;
-  color     : #000000;
+  padding: 0px;
+  border: 0;
+  margin: 0;
+  color: #000000;
 }
 
 DockAreaDragTitle {
@@ -415,28 +419,28 @@ DockWidgetTitle[active="true"] {
 }
 
 DockWidgetTitle QPushButton {
-  min-height      : 0.9em;
-  height          : 0.9em;
-  min-width       : 1.1em;
-  padding         : 0;
+  min-height: 0.9em;
+  height: 0.9em;
+  min-width: 1.1em;
+  padding: 0;
   background-color: transparent;
 }
 
 DockWidgetTitle QPushButton[toolTip="Fullscreen"] {
-  image         : url("$RELPATH/icons/fullscreen.png");
-  color         : #000000;
+  image: url("$RELPATH/icons/fullscreen.png");
+  color: #000000;
   qproperty-icon: url("$RELPATH/icons/blank.png");
 }
 
 DockWidgetTitle QPushButton[toolTip="Float"] {
-  image         : url("$RELPATH/icons/float.png");
-  color         : #000000;
+  image: url("$RELPATH/icons/float.png");
+  color: #000000;
   qproperty-icon: url("$RELPATH/icons/blank.png");
 }
 
 DockWidgetTitle QPushButton[toolTip="Close"] {
-  image         : url("$RELPATH/icons/close.png");
-  color         : #000000;
+  image: url("$RELPATH/icons/close.png");
+  color: #000000;
   qproperty-icon: url("$RELPATH/icons/blank.png");
 }
 
@@ -446,9 +450,9 @@ EditContainer {
 
 QScrollBar {
   background-color: #efefef;
-  border          : 0px solid #efefef;
-  margin          : 0;
-  padding         : 0;
+  border: 0px solid #efefef;
+  margin: 0;
+  padding: 0;
 }
 
 QScrollBar:horizontal {
@@ -460,25 +464,25 @@ QScrollBar:vertical {
 }
 
 QScrollBar:sub-line {
-  width : 0;
+  width: 0;
   height: 0;
 }
 
 QScrollBar:add-line {
-  width : 0;
+  width: 0;
   height: 0;
 }
 
 QScrollBar:add-page {
   background: none;
-  width     : 0;
-  height    : 0;
+  width: 0;
+  height: 0;
 }
 
 QScrollBar:sub-page {
   background: none;
-  width     : 0;
-  height    : 0;
+  width: 0;
+  height: 0;
 }
 
 QScrollBar:handle {
@@ -502,12 +506,12 @@ ChooserContainer {
 }
 
 QGroupBox {
-  border    : 1px solid #afafaf;
+  border: 1px solid #afafaf;
   margin-top: 5px;
 }
 
 QGroupBox:title {
-  subcontrol-origin  : margin;
+  subcontrol-origin: margin;
   subcontrol-position: top center;
 }
 
@@ -553,71 +557,120 @@ IDADockWidget[objectName="Output window"] QGroupBox QPushButton:focus {
 }*/
 
 
-CustomIDAMemo
-{
-    border: none;
-    qproperty-graph-bg-top: #EFEFEF;
-    qproperty-graph-bg-bottom: #EFEFEF;
-    qproperty-graph-node-shadow: #EFEFEF;
+CustomIDAMemo {
+  border: none;
+  qproperty-graph-bg-top: #EFEFEF;
+  qproperty-graph-bg-bottom: #EFEFEF;
+  qproperty-graph-node-shadow: #EFEFEF;
 
-    qproperty-line-fg-default                     : blue;        /* Default                                       */
-    qproperty-line-fg-regular-comment             : blue;        /* Regular comment                               */
-    qproperty-line-fg-repeatable-comment          : gray;        /* Repeatable commen                             */
-    qproperty-line-fg-automatic-comment           : gray;        /* Automatic comment                             */
-    qproperty-line-fg-insn                        : navy;        /* Instruction                                   */
-    qproperty-line-fg-dummy-data-name             : navy;        /* Dummy Data Name                               */
-    qproperty-line-fg-regular-data-name           : blue;        /* Regular Data Name                             */
-    qproperty-line-fg-demangled-name              : blue;        /* Demangled Name                                */
-    qproperty-line-fg-punctuation                 : navy;        /* Punctuation                                   */
-    qproperty-line-fg-charlit-in-insn             : green;       /* Char constant                                 */
-    qproperty-line-fg-strlit-in-insn              : lime;        /* String constant                               */
-    qproperty-line-fg-numlit-in-insn              : green;       /* Numeric constant                              */
-    qproperty-line-fg-void-opnd                   : #FF8000;     /* Void operand                                  */
-    qproperty-line-fg-code-xref                   : green;       /* Code reference                                */
-    qproperty-line-fg-data-xref                   : #8080FF;     /* Data reference                                */
-    qproperty-line-fg-code-xref-to-tail           : red;         /* Code reference to tail byte                   */
-    qproperty-line-fg-data-xref-to-tail           : olive;       /* Data reference to tail byte                   */
-    qproperty-line-fg-error                       : #010101;     /* Error or problem                              */
-    qproperty-line-fg-line-prefix                 : silver;      /* Line prefix                                   */
-    qproperty-line-fg-opcode-byte                 : blue;        /* Opcode bytes                                  */
-    qproperty-line-fg-extra-line                  : blue;        /* Extra line                                    */
-    qproperty-line-fg-alt-opnd                    : blue;        /* Alternative operand                           */
-    qproperty-line-fg-hidden                      : gray;        /* Hidden name                                   */
-    qproperty-line-fg-libfunc                     : #8080FF;     /* Library function name                         */
-    qproperty-line-fg-locvar                      : green;       /* Local variable name                           */
-    qproperty-line-fg-dummy-code-name             : navy;        /* Dummy code name                               */
-    qproperty-line-fg-asm-directive               : blue;        /* Assembler directive                           */
-    qproperty-line-fg-macro                       : purple;      /* Macro                                         */
-    qproperty-line-fg-strlit-in-data              : green;       /* String constant in data directive             */
-    qproperty-line-fg-charlit-in-data             : green;       /* Char constant in data directive               */
-    qproperty-line-fg-numlit-in-data              : #008040;     /* Numeric constant in data directive            */
-    qproperty-line-fg-keyword                     : navy;        /* Keywords (offset, byte ptr, near)             */
-    qproperty-line-fg-register-name               : navy;        /* Register name                                 */
-    qproperty-line-fg-import-name                 : fuchsia;     /* Imported name                                 */
-    qproperty-line-fg-segment-name                : olive;       /* Segment name                                  */
-    qproperty-line-fg-dummy-unknown-name          : navy;        /* Dummy unknown name                            */
-    qproperty-line-fg-code-name                   : blue;        /* Regular Code Name                             */
-    qproperty-line-fg-unknown-name                : navy;        /* Regular Unknown Name                          */
-    qproperty-line-fg-collapsed-line              : blue;        /* Collapsed line                                */
-    qproperty-line-bg-default                     : white;       /* Default background                            */
-    qproperty-line-bg-selected                    : #C0BBAF;     /* Selected background                           */
-    qproperty-line-pfx-libfunc                    : cyan;        /* Line prefix: Library function                 */
-    qproperty-line-pfx-func                       : black;       /* Line prefix: Regular function                 */
-    qproperty-line-pfx-insn                       : maroon;      /* Line prefix: Single instruction               */
-    qproperty-line-pfx-data                       : gray;        /* Line prefix: Data bytes                       */
-    qproperty-line-pfx-unexplored                 : olive;       /* Line prefix: Unexplored byte                  */
-    qproperty-line-pfx-extern                     : fuchsia;     /* Line prefix: External name definition segment */
-    qproperty-line-pfx-current-line               : blue;        /* Line prefix: Current line                     */
-    qproperty-line-pfx-hidden-line                : black;       /* Line prefix: Hidden line                      */
-    qproperty-line-pfx-lumina                     : #32CD32;     /* Line prefix: Lumina                           */
+  qproperty-line-fg-default: blue;
+  /* Default                                       */
+  qproperty-line-fg-regular-comment: blue;
+  /* Regular comment                               */
+  qproperty-line-fg-repeatable-comment: gray;
+  /* Repeatable commen                             */
+  qproperty-line-fg-automatic-comment: gray;
+  /* Automatic comment                             */
+  qproperty-line-fg-insn: navy;
+  /* Instruction                                   */
+  qproperty-line-fg-dummy-data-name: navy;
+  /* Dummy Data Name                               */
+  qproperty-line-fg-regular-data-name: blue;
+  /* Regular Data Name                             */
+  qproperty-line-fg-demangled-name: blue;
+  /* Demangled Name                                */
+  qproperty-line-fg-punctuation: navy;
+  /* Punctuation                                   */
+  qproperty-line-fg-charlit-in-insn: green;
+  /* Char constant                                 */
+  qproperty-line-fg-strlit-in-insn: lime;
+  /* String constant                               */
+  qproperty-line-fg-numlit-in-insn: green;
+  /* Numeric constant                              */
+  qproperty-line-fg-void-opnd: #FF8000;
+  /* Void operand                                  */
+  qproperty-line-fg-code-xref: green;
+  /* Code reference                                */
+  qproperty-line-fg-data-xref: #8080FF;
+  /* Data reference                                */
+  qproperty-line-fg-code-xref-to-tail: red;
+  /* Code reference to tail byte                   */
+  qproperty-line-fg-data-xref-to-tail: olive;
+  /* Data reference to tail byte                   */
+  qproperty-line-fg-error: #010101;
+  /* Error or problem                              */
+  qproperty-line-fg-line-prefix: silver;
+  /* Line prefix                                   */
+  qproperty-line-fg-opcode-byte: blue;
+  /* Opcode bytes                                  */
+  qproperty-line-fg-extra-line: blue;
+  /* Extra line                                    */
+  qproperty-line-fg-alt-opnd: blue;
+  /* Alternative operand                           */
+  qproperty-line-fg-hidden: gray;
+  /* Hidden name                                   */
+  qproperty-line-fg-libfunc: #8080FF;
+  /* Library function name                         */
+  qproperty-line-fg-locvar: green;
+  /* Local variable name                           */
+  qproperty-line-fg-dummy-code-name: navy;
+  /* Dummy code name                               */
+  qproperty-line-fg-asm-directive: blue;
+  /* Assembler directive                           */
+  qproperty-line-fg-macro: purple;
+  /* Macro                                         */
+  qproperty-line-fg-strlit-in-data: green;
+  /* String constant in data directive             */
+  qproperty-line-fg-charlit-in-data: green;
+  /* Char constant in data directive               */
+  qproperty-line-fg-numlit-in-data: #008040;
+  /* Numeric constant in data directive            */
+  qproperty-line-fg-keyword: navy;
+  /* Keywords (offset, byte ptr, near)             */
+  qproperty-line-fg-register-name: navy;
+  /* Register name                                 */
+  qproperty-line-fg-import-name: fuchsia;
+  /* Imported name                                 */
+  qproperty-line-fg-segment-name: olive;
+  /* Segment name                                  */
+  qproperty-line-fg-dummy-unknown-name: navy;
+  /* Dummy unknown name                            */
+  qproperty-line-fg-code-name: blue;
+  /* Regular Code Name                             */
+  qproperty-line-fg-unknown-name: navy;
+  /* Regular Unknown Name                          */
+  qproperty-line-fg-collapsed-line: blue;
+  /* Collapsed line                                */
+  qproperty-line-bg-default: white;
+  /* Default background                            */
+  qproperty-line-bg-selected: #C0BBAF;
+  /* Selected background                           */
+  qproperty-line-pfx-libfunc: cyan;
+  /* Line prefix: Library function                 */
+  qproperty-line-pfx-func: black;
+  /* Line prefix: Regular function                 */
+  qproperty-line-pfx-insn: maroon;
+  /* Line prefix: Single instruction               */
+  qproperty-line-pfx-data: gray;
+  /* Line prefix: Data bytes                       */
+  qproperty-line-pfx-unexplored: olive;
+  /* Line prefix: Unexplored byte                  */
+  qproperty-line-pfx-extern: fuchsia;
+  /* Line prefix: External name definition segment */
+  qproperty-line-pfx-current-line: blue;
+  /* Line prefix: Current line                     */
+  qproperty-line-pfx-hidden-line: black;
+  /* Line prefix: Hidden line                      */
+  qproperty-line-pfx-lumina: #32CD32;
+  /* Line prefix: Lumina                           */
 }
 
 
 TCpuRegs {
-  background-color              : #4D4D4D;
-  qproperty-register-defined    : #858585;
-  qproperty-register-changed    : #569cd6;
-  qproperty-register-edited     : #800080;
+  background-color: #4D4D4D;
+  qproperty-register-defined: #858585;
+  qproperty-register-changed: #569cd6;
+  qproperty-register-edited: #800080;
   qproperty-register-unavailable: #808080;
 }
 
@@ -626,40 +679,40 @@ TCpuRegs IDALabel {
 }
 
 navband_t {
-  qproperty-code                : #b97a57;
-  qproperty-data                : #c0c0c0;
-  qproperty-error               : #ff5b5b;
+  qproperty-code: #b97a57;
+  qproperty-data: #c0c0c0;
+  qproperty-error: #ff5b5b;
   qproperty-auto-analysis-cursor: #ffaa00;
-  qproperty-lumina-function     : #32cd32;
-  qproperty-lib-function        : #D5D5D5;
-  qproperty-function            : #797979;
-  qproperty-undefined           : #A4A4A4;
-  qproperty-extern              : #A0ADC5;
-  qproperty-gap                 : #E9E9E9;
-  qproperty-cursor              : #0055FF;
+  qproperty-lumina-function: #32cd32;
+  qproperty-lib-function: #D5D5D5;
+  qproperty-function: #797979;
+  qproperty-undefined: #A4A4A4;
+  qproperty-extern: #A0ADC5;
+  qproperty-gap: #E9E9E9;
+  qproperty-cursor: #0055FF;
 }
 
 MainMsgList {
-  color           : #333333;
+  color: #333333;
   background-color: #ffffff;
 }
 
 TextArrows {
-  qproperty-jump-in-function         : #c0c0c0;
+  qproperty-jump-in-function: #c0c0c0;
   qproperty-jump-external-to-function: #ff0000;
-  qproperty-jump-under-cursor        : #42cf1f;
-  qproperty-jump-target              : #008000;
-  qproperty-register-target          : #0078d6;
+  qproperty-jump-under-cursor: #42cf1f;
+  qproperty-jump-target: #008000;
+  qproperty-register-target: #0078d6;
 }
 
 TextEdit {
-  qproperty-keyword1-fg    : #0000ff;
-  qproperty-keyword2-fg    : #800080;
-  qproperty-keyword3-fg    : #ff0000;
-  qproperty-string-fg      : #8b0000;
-  qproperty-comment-fg     : #006400;
+  qproperty-keyword1-fg: #0000ff;
+  qproperty-keyword2-fg: #800080;
+  qproperty-keyword3-fg: #ff0000;
+  qproperty-string-fg: #8b0000;
+  qproperty-comment-fg: #006400;
   qproperty-preprocessor-fg: #0078d6;
-  qproperty-number-fg      : #008b8b;
+  qproperty-number-fg: #008b8b;
 }
 
 CustomIDAMemo[debugging="true"] {
@@ -675,7 +728,7 @@ navigator_t {
 }
 
 QSplitter::handle {
-  image           : url(images/splitter.png);
+  image: url(images/splitter.png);
   background-color: white;
 }
 
@@ -694,26 +747,23 @@ QLabel {
 }
 
 TextEdit text_edit_margin_widget_t {
-  color                 : #666666;
+  color: #666666;
   qproperty-header-color: gainsboro;
 }
 
 TChooser {
-  qproperty-highlight-bg-default : red;
+  qproperty-highlight-bg-default: red;
   qproperty-highlight-bg-selected: pink;
 }
 
-CustomIDAMemo[debugging="true"]
-{
-    qproperty-graph-bg-top: #EFEFEF;
-    qproperty-graph-bg-bottom: white;
-    qproperty-graph-node-shadow: #EFEFEF;
+CustomIDAMemo[debugging="true"] {
+  qproperty-graph-bg-top: #EFEFEF;
+  qproperty-graph-bg-bottom: white;
+  qproperty-graph-node-shadow: #EFEFEF;
 }
 
-CustomIDAMemo[hints="true"]
-{
-    qproperty-graph-bg-top: #EFEFEF;
-    qproperty-graph-bg-bottom: white;
-    qproperty-graph-node-shadow: #EFEFEF;
+CustomIDAMemo[hints="true"] {
+  qproperty-graph-bg-top: #EFEFEF;
+  qproperty-graph-bg-bottom: white;
+  qproperty-graph-node-shadow: #EFEFEF;
 }
-
